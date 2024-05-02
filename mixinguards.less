@@ -1,0 +1,23 @@
+@import "variables";
+
+.keyframes-transformation(@full-opacity) when (@full-opacity = 1) {
+    opacity: @full-opacity;
+    transform: @translatex;
+}
+
+.full-width-and-height(@full-width-and-height) when 
+(@full-width-and-height <= 100%) {
+    width: 100%;
+    height: 100%;
+}
+
+.base-html-setup(@zero-pad) when (@zero-pad <= 0) {
+    box-sizing: border-box;
+    padding: @zero-pad;
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    cursor: default;
+}
+.set-half-opacity(@half-opacity) when (@half-opacity = 50%) {
+    opacity: @half-opacity;
+}
